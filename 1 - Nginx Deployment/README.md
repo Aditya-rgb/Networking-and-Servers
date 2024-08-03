@@ -61,4 +61,35 @@ Created a basic front-end website showcasing my profile. Additionally, developed
 
 ## Troubleshooting
 ### Setting up Nginx
+    ``` bash
+    sudo apt-get update
+
 ### Update the system:
+    ``` bash
+    sudo apt-get install nginx
+    
+### Configuring Nginx
+1. Navigate to the Nginx configuration directory:
+
+2. Edit the default configuration file
+
+3. Comment out the following lines:
+   ``` bash
+   #root /var/www/html;
+   #Add index.php to the list if you are using PHP
+   #index index.html index.htm index.nginx-debian.html;
+   location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                #try_files $uri $uri/ =404;
+   ```
+4. Add the following configuration:
+   ``` bash
+   location / {
+    proxy_pass http://127.0.0.1:5000;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+   ```
