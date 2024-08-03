@@ -60,5 +60,5 @@ Created a basic front-end website showcasing my profile. Additionally, developed
 2. You can run the code from VS Code or your terminal.
 
 ## Troubleshooting
-# Setting up Nginx
-# Update the system:
+### Setting up Nginx
+### Update the system:
