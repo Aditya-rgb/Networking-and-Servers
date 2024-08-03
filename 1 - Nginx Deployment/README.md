@@ -1,100 +1,88 @@
 # My Profile Website
 
-## Introduction
+## Assignment Overview
 
-Created a basic front-end website showcasing my profile. Additionally, developed a basic FLASK application to render the website seamlessly on localhost.
+Created a basic front-end website showcasing my profile. Developed a basic FLASK application to render the website seamlessly on localhost and set up Nginx to host the website.
 
-## Features
+## Steps Taken
 
-- Basic front-end website.
-- FLASK application for seamless rendering.
-- Tested on IP addresses.
-- Setup Nginx to host the FLASK application.
+1. **Creating the Website**:
+   - Developed a front-end website to showcase the profile.
 
-## Prerequisites
+2. **Setting Up the FLASK Application**:
+   - Created a basic FLASK application to render the website on localhost:
+     ```python
+     from flask import Flask, render_template
 
-- Python installed on your system.
-- Flask library for Python.
-- Nginx or Apache web server.
+     app = Flask(__name__)
 
-## Installation
+     @app.route('/')
+     def home():
+         return render_template('index.html')
 
-1. Cloned the repository to your local machine.
-2. Navigate to the project directory.
-3. Install the required Python libraries:
-   ```bash
-   pip install flask
+     if __name__ == '__main__':
+         app.run(host='0.0.0.0', port=5000)
+     ```
 
-## Configuration
-1. Flask Application
-2. Create a basic FLASK application to render the website
-   ``` bash
-   from flask import Flask, render_template
+3. **Testing the FLASK Application**:
+   - Tested the FLASK application on the following IP addresses:
+     - http://127.0.0.1:5000
+     - http://192.168.0.190:5000
+   - Run the code with:
+     ```bash
+     python app.py
+     ```
 
-   app = Flask(__name__)
+4. **Setting Up Nginx**:
+   - Installed Nginx and configured it to proxy requests to the FLASK application:
+     ```bash
+     sudo apt-get update
+     sudo apt-get install nginx
+     ```
+   - Edited the Nginx configuration:
+     ```bash
+     cd /etc/nginx/sites-enabled
+     sudo nano default
+     ```
+   - Commented out default configuration lines:
+     ```nginx
+     #root /var/www/html;
+     #index index.html index.htm index.nginx-debian.html;
+     ```
+   - Added configuration to proxy requests:
+     ```nginx
+     location / {
+         proxy_pass http://127.0.0.1:5000;
+         proxy_set_header Host $host;
+         proxy_set_header X-Real-IP $remote_addr;
+         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+         proxy_set_header X-Forwarded-Proto $scheme;
+     }
+     ```
+   - Restarted and tested Nginx:
+     ```bash
+     sudo service nginx start
+     sudo service nginx reload
+     sudo nginx -t
+     ifconfig
+     ```
 
-   @app.route('/')
-   def home():
-       return render_template('index.html')
+5. **Configuring Domain Name**:
+   - Set up a local domain name "awesomeweb":
+     ```bash
+     cd /etc/
+     sudo nano hosts
+     ```
+   - Added the following line:
+     ```
+     192.168.0.190 awesomeweb
+     ```
 
-   if __name__ == '__main__':
-       app.run(host='0.0.0.0', port=5000)
-   ```
-3. Ensure the directory and files hierarchy is as follows:
-   ``` bash
-   project_directory/
-   |-- app.py
-   |-- templates/
-   |   |-- index.html
+6. **Testing Domain Configuration**:
+   - Tested the domain name in the browser:
+     - http://awesomeweb
 
-## Usage
-1. Run the FLASK application
-   ``` bash
-   python app.py
-   ```
-2. Access the website on your browser
-   ``` bash
-   http://127.0.0.1:5000
-   ```
-## Testing
-1. Test the FLASK application on your browser using the above IP addresses.
-2. You can run the code from VS Code or your terminal.
+## Conclusion
 
-## Troubleshooting
-### Setting up Nginx
-    ``` bash
-    sudo apt-get update
-    ```
-### Update the system:
-    ``` bash
-    sudo apt-get install nginx
-    ```
-### Configuring Nginx
-1. Navigate to the Nginx configuration directory:
-   ``` bash
-   cd /etc/nginx/sites-enabled
-   ```
-2. Edit the default configuration file
-   ``` bash
-   sudo nano default
-   ```
-4. Comment out the following lines:
-   ``` bash
-   #root /var/www/html;
-   #Add index.php to the list if you are using PHP
-   #index index.html index.htm index.nginx-debian.html;
-   location / {
-                # First attempt to serve request as file, then
-                # as directory, then fall back to displaying a 404.
-                #try_files $uri $uri/ =404;
-   ```
-5. Add the following configuration:
-   ``` bash
-   location / {
-    proxy_pass http://127.0.0.1:5000;
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto $scheme;
-              }
-   ```
+Successfully developed and deployed a profile website using FLASK and Nginx. The setup included configuring Nginx to host the FLASK application and testing the deployment both via local IP and a custom domain name.
+
