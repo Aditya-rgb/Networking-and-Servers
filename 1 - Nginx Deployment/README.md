@@ -1,7 +1,31 @@
 # Nginx Deployment
 
-## Steps Taken
+## Introduction
 
+Created a basic front-end website showcasing my profile. Developed a basic FLASK application to render the website seamlessly on localhost and set up Nginx to host the website.
+
+## Features
+
+- Basic front-end profile website.
+- FLASK application for local rendering.
+- Nginx configuration for hosting the FLASK application.
+- Custom domain name setup for local testing.
+
+## Prerequisites
+
+- Python installed on your system.
+- Flask library for Python.
+- Nginx or Apache web server.
+- Access to modify `/etc/hosts` for custom domain setup.
+
+## Installation
+
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install the required Python libraries:
+   ```bash
+   pip install flask
+## Configuration
 1. **Creating the Website**:
    - Developed a front-end website to showcase the profile.
 
@@ -19,8 +43,9 @@
      if __name__ == '__main__':
          app.run(host='0.0.0.0', port=5000)
      ```
+## Testing
 
-3. **Testing the FLASK Application**:
+1. **Testing the FLASK Application**:
    - Tested the FLASK application on the following IP addresses:
      - http://127.0.0.1:5000
      - http://192.168.0.190:5000
@@ -29,7 +54,7 @@
      python app.py
      ```
 
-4. **Setting Up Nginx**:
+2. **Setting Up Nginx**:
    - Installed Nginx and configured it to proxy requests to the FLASK application:
      ```bash
      sudo apt-get update
@@ -68,7 +93,7 @@
      ifconfig
      ```
 
-5. **Configuring Domain Name**:
+3. **Configuring Domain Name**:
    - Setting up a local domain name "awesomeweb":
      ```bash
      cd /etc/
@@ -79,7 +104,7 @@
      192.168.0.190 awesomeweb
      ```
 
-6. **Testing Domain Configuration**:
+4. **Testing Domain Configuration**:
    - Tested the domain name in the browser:
      - http://awesomeweb
 
