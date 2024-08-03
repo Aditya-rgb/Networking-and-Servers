@@ -20,9 +20,9 @@ Created a basic front-end website showcasing my profile. Developed a basic FLASK
 
 ## Installation
 
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Install the required Python libraries:
+1. Cloned the repository to your local machine.
+2. Navigated to the project directory.
+3. Installed the required Python libraries:
    ```bash
    pip install flask
 ## Configuration
