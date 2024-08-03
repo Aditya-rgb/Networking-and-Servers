@@ -28,7 +28,7 @@ Created a basic front-end website showcasing my profile. Developed a basic FLASK
    - Tested the FLASK application on the following IP addresses:
      - http://127.0.0.1:5000
      - http://192.168.0.190:5000
-   - Run the code with:
+   - Ran the code with:
      ```bash
      python app.py
      ```
@@ -48,8 +48,13 @@ Created a basic front-end website showcasing my profile. Developed a basic FLASK
      ```nginx
      #root /var/www/html;
      #index index.html index.htm index.nginx-debian.html;
+     #index index.html index.htm index.nginx-debian.html;
+      location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                #try_files $uri $uri/ =404;
      ```
-   - Added configuration to proxy requests:
+   - Added following configuration to proxy requests:
      ```nginx
      location / {
          proxy_pass http://127.0.0.1:5000;
@@ -68,7 +73,7 @@ Created a basic front-end website showcasing my profile. Developed a basic FLASK
      ```
 
 5. **Configuring Domain Name**:
-   - Set up a local domain name "awesomeweb":
+   - Setting up a local domain name "awesomeweb":
      ```bash
      cd /etc/
      sudo nano hosts
