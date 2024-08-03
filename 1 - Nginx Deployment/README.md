@@ -39,6 +39,7 @@ Created a basic front-end website showcasing my profile. Additionally, developed
 
  if __name__ == '__main__':
      app.run(host='0.0.0.0', port=5000)
+ ```
 3. Directory and Files Hierarchy
    Ensure the directory and files hierarchy is as follows:
    ``` bash
