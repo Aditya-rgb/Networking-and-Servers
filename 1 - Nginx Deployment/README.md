@@ -78,6 +78,9 @@ Created a basic front-end website showcasing my profile. Developed a basic FLASK
    - Added following configuration to proxy requests:
      ```nginx
      location / {
+         #First attempt to serve request as file, then
+         #as directory, then fall back to displaying a 404.
+         #try_files $uri $uri/ =404;
          proxy_pass http://127.0.0.1:5000;
          proxy_set_header Host $host;
          proxy_set_header X-Real-IP $remote_addr;
