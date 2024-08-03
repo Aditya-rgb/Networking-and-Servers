@@ -1,1 +1,1 @@
-## A website can have many subdomains and different services are running on them. This is a Python script to check the status of the subdomains which arehe status every mi up or down. The script automatically checks and updates it in tabular format on the screen. 
+## A website can have many subdomains and different services are running on them. This is a Python script to check the status of the subdomains which are up or down. The script automatically checks and updates it in tabular format on the screen. 
