@@ -40,11 +40,25 @@ Created a basic front-end website showcasing my profile. Additionally, developed
    if __name__ == '__main__':
        app.run(host='0.0.0.0', port=5000)
    ```
-3. Directory and Files Hierarchy
-   Ensure the directory and files hierarchy is as follows:
+3. Ensure the directory and files hierarchy is as follows:
    ``` bash
    project_directory/
    |-- app.py
    |-- templates/
    |   |-- index.html
 
+## Usage
+1. Run the FLASK application
+   ``` bash
+   python app.py
+2. Access the website on your browser
+   ``` bash
+   http://127.0.0.1:5000
+   
+## Testing
+1. Test the FLASK application on your browser using the above IP addresses.
+2. You can run the code from VS Code or your terminal.
+
+## Troubleshooting
+# Setting up Nginx
+# Update the system:
