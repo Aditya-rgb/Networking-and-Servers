@@ -1,8 +1,4 @@
-# My Profile Website
-
-## Assignment Overview
-
-Created a basic front-end website showcasing my profile. Developed a basic FLASK application to render the website seamlessly on localhost and set up Nginx to host the website.
+# Nginx Deployment
 
 ## Steps Taken
 
