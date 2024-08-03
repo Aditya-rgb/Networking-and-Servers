@@ -59,6 +59,15 @@ This document outlines the steps to create and configure a virtual machine (VM) 
 1. **Verifed the Website Hosting**:
    - Opened the web browser in Ubuntu and entered the IP address obtained from the `ifconfig` command.
    - Ensured that the dummy website loaded correctly.
+  
+2. Used NMAP windows version to scan for VMs hosted online
+   - Went to the link - https://nmap.org/download.html#windows
+   - Downloaded and completed all the steps to install the exe file
+   - Opened Zenmap, a GUI for NMAP windows
+   - in the target field gave the IP address of the ubuntu which i got by typing in the following command in Ubuntu terminal
+     ``` bash
+     ifconfig
+   - selected "intense scan" in profile section
 
 ## Conclusion
 
