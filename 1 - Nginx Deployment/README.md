@@ -51,10 +51,11 @@ Created a basic front-end website showcasing my profile. Additionally, developed
 1. Run the FLASK application
    ``` bash
    python app.py
+   ```
 2. Access the website on your browser
    ``` bash
    http://127.0.0.1:5000
-   
+   ```
 ## Testing
 1. Test the FLASK application on your browser using the above IP addresses.
 2. You can run the code from VS Code or your terminal.
