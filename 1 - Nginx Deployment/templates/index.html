@@ -1,60 +1,100 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Aditya Vakharia</title>
-  <link rel="stylesheet" type="text/css" href="css/styles.css" />
-  <link rel="icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat:ital@1&family=Sacramento&display=swap" rel="stylesheet">
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI-CD Pipeline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* White background */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #000000; /* Black text */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #ff6600; /* Orange background */
+            color: #ffffff; /* White text */
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #ff4500 3px solid; /* Slightly darker orange border */
+        }
+        header a {
+            color: #ffffff; /* White text for links */
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        nav {
+            float: right;
+            margin-top: 10px;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            display: inline;
+            margin-left: 5px;
+        }
+        .showcase {
+            min-height: 400px;
+            background: url('https://via.placeholder.com/1200x400/ff6600/ffffff') no-repeat 0 -400px;
+            text-align: center;
+            color: #000000; /* Black text */
+        }
+        .showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        .showcase p {
+            font-size: 20px;
+        }
+        footer {
+            background: #ff6600; /* Orange background */
+            color: #ffffff; /* White text */
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
 
-    <div class="top-container">
-      <img  class="top-cloud" src="D:\Full Stack Developer\Web Development\CSS - My Site\CSS - My Site Images\cloud.png" alt="cloud-img">
-
-      <h1>I am Aditya.</h1>
-      <h2>a <span class="pro">DevOps</span>Engineer.</h2>
-      <img  class="bottom-cloud" src="D:\Full Stack Developer\Web Development\CSS - My Site\CSS - My Site Images\cloud.png" alt="cloud-img">
-      <img  class="semi" src="" alt="">
-    </div>
-
-    <div class="middle-container">
-      <div class="profile">
-        <img class="aditya" src="D:\Full Stack Developer\Web Development\CSS - My Site\CSS - My Site Images\Aditya.png" alt="Aditya's picture">
-        <h2>Hello.</h2>
-        <p class="intro">I'm a DevOps Engineer / Data Engineer based out of Bangalore, India. I have a passion for web design and love to create for web and mobile devices.</p>
-      </div>
-      <br>
-      <hr>
-      <div class="skills">
-        <h2>My Skills.</h2>
-        <div class="skill-row">
-          <img class="machine" src="D:\Full Stack Developer\Web Development\CSS - My Site\CSS - My Site Images\learning.png" alt="machine-learning">
-          <h3>Machine Learning</h3>
-          <p>Gained insight to the Machine Learning aspect of Artificial Intelligence & attended industry-based training classes for Machine learning & Performed data-analysis and prediction algorithms on various datasets.</p>
+<header>
+    <div class="container">
+        <div id="branding">
+            <h1><span class="highlight">Made by Aditya with love</span> Vakharia</h1>
         </div>
-        <div class="skill-row">
-          <img class="deep" src="D:\Full Stack Developer\Web Development\CSS - My Site\CSS - My Site Images\deep-learning.png" alt="deep-learning">
-          <h3>Deep Learning</h3>
-          <p>Gained insight to the Deep Learning aspect of Artificial Intelligence & completed industry-based online training classes for Deep Learning(Hands-on Artificial Neural Networks).
-             And Expanded field knowledge on supervised and unsupervised algorithms.</p>
-        </div>
-      </div>
-      <hr>
-      <div class="contact-me">
-        <h2>Get In Touch</h2>
-        <p class="contact-message">If you love designing and coding as much as I do. If you have a project that you want to get started, think you need my help with something or just fancy saying hey, then get in touch...</p>
-        <a class="myButton" href="mailto:adityavakharia@gmail.com">CONTACT ME</a><br><br>
-      </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-    <div class="bottom-container">
+</header>
 
-      <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
-      <a class="footer-link" href="https://twitter.com/">Twitter</a>
-      <a class="footer-link" href="https://www.appbrewery.co/">Website</a>
-      <p class="copyright">© 2020 Aditya Vakharia.</p>
+<section class="showcase">
+    <div class="container">
+        <h1>Welcome to Our Website</h1>
+        <p>This is a simple, clean, and responsive web page template using HTML and CSS.</p>
     </div>
+</section>
 
+<footer>
+    <p>Sample Web Page &copy; 2024</p>
+</footer>
 
 </body>
 </html>
